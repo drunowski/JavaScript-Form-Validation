@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Runowski Deliverable</title>
+ <script>
+	function validate()
+	{
+		var inputs = [];
+		inputs[0] = document.getElementById("FirstText").value;
+		inputs[1] = document.getElementById("LastText").value;
+		inputs[2] = document.getElementById("MailText").value;
+		
+		for(var i = 0; i < inputs.length; i++)
+		{
+			if(inputs[i] == "")
+			{
+			alert("Form Not Filled Out Completely");
+			return false;
+			}
+		}
+
+	}
+	
+ </script>
+</head>
+<head>
+ <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<h1>Customer Information</h1>
+    <form name="infoForm" action="/action_page.php" onsubmit="return validate()" method="post">
+      <fieldset>
+        <legend>Info Form</legend>
+        <p>
+          <label>First Name:</label>
+          <input type = "text" id= "FirstText" >
+        </p>
+        <p>
+          <label>Last Name:</label>
+          <input type = "text" id = "LastText" >
+        </p>
+        <p>
+          <label>E-Mail:</label>
+          <input type = "email"  id = "MailText" >
+        </p>
+		<p>
+			<input type="submit" value="Submit">
+		</p>
+      </fieldset>
+    </form>
+
+</body>
+</html>
